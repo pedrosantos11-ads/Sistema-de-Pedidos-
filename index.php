@@ -6,14 +6,14 @@ require_once 'Produto.php';
 require_once 'ItemPedido.php';
 require_once 'Pedido.php';
 
-$cliente = new Cliente("Pedro","coringao1907@gmail.com");
+$cliente = new Cliente("Pedro","phs1819@gmail.com");
 
-$produto1 = new Produto("Feijão",12.00);
-$produto2 = new Produto("Farinha",5.70);
+$produto1 = new Produto("Play-Station 5",4500.00);
+$produto2 = new Produto("Notebook",3000.00);
 
-$pedido = new Pedido($cliente,1,'10/04/2021');
+$pedido = new Pedido($cliente,22,'10/04/2026');
 
-$item1 = new ItemPedido($produto1, 2);
+$item1 = new ItemPedido($produto1, 1);
 $item2 = new ItemPedido($produto2, 1);
 
 $pedido->adicionarItem($item1);
@@ -30,6 +30,6 @@ $pedido->adicionarItem($item2);
         echo "-----" . PHP_EOL;
     }
 
-    echo "TOTAL: R$ " . number_format($pedido->CalcularTotal(), 2, ',', '') . PHP_EOL;
+    echo "TOTAL: R$ " . number_format($pedido->calcularTotal(), 2, ',', '') . PHP_EOL;
 
 

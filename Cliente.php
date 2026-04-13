@@ -1,6 +1,6 @@
 <?php
-
-class Cliente {
+declare(strict_types=1);
+final class Cliente {
     private string $nome;
     private string $email;
 
@@ -13,6 +13,15 @@ class Cliente {
     }
     public function getEmail(): string {
         return $this->email;
+    }
+    public function setNome(string $nome): void
+    {
+        $this->nome = $nome;
+    }
+
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
     }
 
 }

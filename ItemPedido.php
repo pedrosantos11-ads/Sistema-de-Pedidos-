@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-class ItemPedido {
+final class ItemPedido {
     private Produto $produto;
     private int $quantidade;
 

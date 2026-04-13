@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-class Produto {
+final class Produto {
     private string $nome;
     private float $preco;
 
@@ -13,5 +13,14 @@ class Produto {
     }
     public function getPreco(): float {
         return $this->preco;
+    }
+    public function setNome(string $nome): void
+    {
+        $this->nome = $nome;
+    }
+
+    public function setPreco(float $preco): void
+    {
+        $this->preco = $preco;
     }
 }

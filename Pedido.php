@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-class Pedido {
+final class Pedido {
     private Cliente $cliente;
     private int $numero;
     private string $data;
